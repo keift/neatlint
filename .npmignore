@@ -1,0 +1,14 @@
+/.github
+/.prettierrc.json
+/assets
+/bun.lock*
+/bunfig.toml
+/CHANGELOG.md
+/eslint.config.ts
+/node_modules
+/package-lock.json
+/src
+/tests
+/tsconfig.json
+/tsup.config.ts
+/types

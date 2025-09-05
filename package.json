@@ -1,5 +1,5 @@
 {
-  "name": "bestlint",
+  "name": "neatlint",
   "version": "1.0.0",
   "description": "Trusty file methods.",
   "license": "MIT",
@@ -18,7 +18,7 @@
     "@types/lodash": "^4.17.20",
     "lodash": "^4.17.21",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.39.1"
+    "typescript-eslint": "^8.42.0"
   },
   "devDependencies": {
     "prettier": "^3.6.2",

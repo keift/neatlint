@@ -4,7 +4,7 @@ import type { NeatlintOptions } from "../types/NeatlintOptions.type";
 
 export const NeatlintOptionsDefault: NeatlintOptions = {
   ignores: ["./dist/**"],
-  files: ["**/*.ts"],
+  files: ["**/*.ts", "**/*.js"],
   languageOptions: {
     parser: TSEslint.parser,
     parserOptions: {

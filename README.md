@@ -16,7 +16,7 @@
 
 <div align="center">
   <br/>
-  <img src="https://i.ibb.co/SwKy4XgJ/logo.png" width="350px"/>
+  <img src="https://i.ibb.co/Fkm2rDrp/unknown.png" width="450px"/>
   <br/>
   <br/>
   <img src="https://img.shields.io/npm/v/nice-eslint?label=version&color=%23633BFF"/>

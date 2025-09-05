@@ -1,10 +1,10 @@
 {
-  "name": "trufs",
-  "version": "1.2.15",
+  "name": "bestlint",
+  "version": "1.0.0",
   "description": "Trusty file methods.",
   "license": "MIT",
-  "homepage": "https://github.com/keift/trufs",
-  "bugs": "https://github.com/keift/trufs/issues",
+  "homepage": "https://github.com/keift/bestlint",
+  "bugs": "https://github.com/keift/bestlint/issues",
   "main": "./dist/main.js",
   "module": "./dist/main.mjs",
   "types": "./dist/main.d.ts",
@@ -15,22 +15,18 @@
     "lint": "eslint ./"
   },
   "dependencies": {
-    "@types/fs-extra": "^11.0.4",
-    "@types/graceful-fs": "^4.1.9",
-    "atomically": "^2.0.3",
-    "fs-extra": "^11.3.1",
-    "graceful-fs": "^4.2.11"
-  },
-  "devDependencies": {
-    "jiti": "^2.5.1",
-    "prettier": "^3.6.2",
-    "tsup": "^8.5.0",
+    "@types/lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.39.1"
   },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/keift/trufs"
+    "url": "https://github.com/keift/bestlint"
   },
   "keywords": [
     "fs",

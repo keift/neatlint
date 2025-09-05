@@ -1,9 +1,29 @@
-import * as Atomically from "atomically";
-import * as FSExtra from "fs-extra";
-import * as GracefulFS from "graceful-fs";
+import TSEslint from "typescript-eslint";
+import _ from "lodash";
 
-import type { Fs } from "./types/Fs.type";
+import { BestlintOptionsDefault } from "./defaults/BestlintOptions.default";
 
-export const fs: Fs = Object.assign({}, GracefulFS, FSExtra, Atomically);
+import type { BestlintOptions } from "./types/BestlintOptions.type";
 
-export type * as Types from "./barrels/Types.barrel";
+export const Bestlint = (options: BestlintOptions = BestlintOptionsDefault): object => {
+  options = _.merge({}, BestlintOptionsDefault, options);
+
+  return [
+    { ignores: ["./dist/**"] },
+    ...TSEslint.configs.strict,
+    {
+      files: ["**/*.ts"],
+      languageOptions: {
+        parser: TSEslint.parser,
+        parserOptions: {
+          project: "./tsconfig.json",
+          sourceType: "module"
+        }
+      },
+      plugins: {
+        "@typescript-eslint": TSEslint.plugin
+      },
+      rules: options.rules
+    }
+  ];
+};

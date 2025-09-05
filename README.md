@@ -175,7 +175,6 @@ Neatlint offers strict ESLint settings.
 | Rule                                                                                                                 | Description                                                                                                  |
 | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | [arrow-body-style](https://eslint.org/docs/latest/rules/arrow-body-style)                                            | Require braces around arrow function bodies.                                                                 |
-| [comma-dangle](https://eslint.org/docs/latest/rules/comma-dangle)                                                    | Require or disallow trailing commas.                                                                         |
 | [func-style](https://eslint.org/docs/latest/rules/func-style)                                                        | Enforce the consistent use of either function declarations or expressions assigned to variables.             |
 | [no-duplicate-imports](https://eslint.org/docs/latest/rules/no-duplicate-imports)                                    | Disallow duplicate module imports.                                                                           |
 | [no-empty](https://eslint.org/docs/latest/rules/no-empty)                                                            | Disallow empty block statements.                                                                             |
@@ -192,10 +191,7 @@ Neatlint offers strict ESLint settings.
 | [prefer-arrow-callback](https://eslint.org/docs/latest/rules/prefer-arrow-callback)                                  | Require using arrow functions for callbacks.                                                                 |
 | [prefer-const](https://eslint.org/docs/latest/rules/prefer-const)                                                    | Require const declarations for variables that are never reassigned after declared.                           |
 | [prefer-template](https://eslint.org/docs/latest/rules/prefer-template)                                              | Require template literals instead of string concatenation.                                                   |
-| [quote-props](https://eslint.org/docs/latest/rules/quote-props)                                                      | Require quotes around object literal property names.                                                         |
 | [eqeqeq](https://eslint.org/docs/latest/rules/eqeqeq)                                                                | Require the use of === and !==.                                                                              |
-| [indent](https://eslint.org/docs/latest/rules/indent)                                                                | Enforce consistent indentation.                                                                              |
-| [quotes](https://eslint.org/docs/latest/rules/quotes)                                                                | Enforce the consistent use of either backticks, double, or single quotes.                                    |
 | [@typescript-eslint/consistent-type-definitions](https://typescript-eslint.io/rules/consistent-type-definitions)     | Enforce type definitions to consistently use either interface or type.                                       |
 | [@typescript-eslint/consistent-type-exports](https://typescript-eslint.io/rules/consistent-type-exports)             | Enforce consistent usage of type exports.                                                                    |
 | [@typescript-eslint/consistent-type-imports](https://typescript-eslint.io/rules/consistent-type-imports)             | Enforce consistent usage of type imports.                                                                    |
@@ -204,6 +200,7 @@ Neatlint offers strict ESLint settings.
 | [@typescript-eslint/no-inferrable-types](https://typescript-eslint.io/rules/no-inferrable-types)                     | Disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean. |
 | [@typescript-eslint/prefer-readonly](https://typescript-eslint.io/rules/prefer-readonly)                             | Require private members to be marked as readonly if they're never modified outside of the constructor.       |
 | [@typescript-eslint/strict-boolean-expressions](https://typescript-eslint.io/rules/strict-boolean-expressions)       | Disallow certain types in boolean expressions.                                                               |
+
 
 ### Types
 

@@ -201,7 +201,6 @@ Neatlint offers strict ESLint settings.
 | [@typescript-eslint/prefer-readonly](https://typescript-eslint.io/rules/prefer-readonly)                             | Require private members to be marked as readonly if they're never modified outside of the constructor.       |
 | [@typescript-eslint/strict-boolean-expressions](https://typescript-eslint.io/rules/strict-boolean-expressions)       | Disallow certain types in boolean expressions.                                                               |
 
-
 ### Types
 
 | Type              |

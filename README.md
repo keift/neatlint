@@ -100,7 +100,7 @@ Briefly as follows.
 > TypeScript
 >
 > ```typescript
-> # ./eslint.config.ts
+> // 📁 ./eslint.config.ts
 > import { Neatlint, type Types as NeatlintTypes } from "neatlint";
 >
 > export default Neatlint();
@@ -109,7 +109,7 @@ Briefly as follows.
 > JavaScript
 >
 > ```javascript
-> # ./eslint.config.js
+> // 📁 ./eslint.config.js
 > import { Neatlint } from "neatlint";
 >
 > export default Neatlint();

@@ -25,4 +25,3 @@ export const Neatlint = (options: NeatlintOptions = NeatlintOptionsDefault): obj
     }
   ];
 };
-

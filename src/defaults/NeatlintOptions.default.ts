@@ -1,4 +1,4 @@
-import TSEslint from "typescript-eslint";
+import TypeScriptEslint from "typescript-eslint";
 
 import type { NeatlintOptions } from "../types/NeatlintOptions.type";
 
@@ -6,7 +6,7 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
   ignores: ["./dist/**"],
   files: ["**/*.ts"],
   languageOptions: {
-    parser: TSEslint.parser,
+    parser: TypeScriptEslint.parser,
     parserOptions: {
       project: "./tsconfig.json",
       sourceType: "module"

@@ -14,48 +14,47 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
   },
   plugins: {},
   rules: {
-    "arrow-body-style": "error", // Require braces around arrow function bodies.
-    "comma-dangle": "error", // Require or disallow trailing commas.
-    "func-style": ["error", "expression", { allowArrowFunctions: true }], // Enforce the consistent use of either function declarations or expressions assigned to variables.
-    "no-duplicate-imports": "error", // Disallow duplicate module imports.
-    "no-empty": "error", // Disallow empty block statements.
-    "no-multi-spaces": "error", // Disallow multiple spaces.
-    "no-multiple-empty-lines": ["error", { max: 1 }], // Disallow multiple empty lines.
-    "no-restricted-syntax": ["error", "SwitchStatement"], // Disallow specified syntax.
-    "no-trailing-spaces": "error", // Disallow trailing whitespace at the end of lines.
-    "no-useless-catch": "error", // Disallow unnecessary catch clauses.
-    "no-useless-constructor": "error", // Disallow unnecessary constructors.
-    "no-useless-rename": "error", // Disallow renaming import, export, and destructured assignments to the same name.
-    "no-useless-return": "error", // Disallow redundant return statements.
-    "no-var": "error", // Require let or const instead of var.
-    "object-shorthand": "error", // Require or disallow method and property shorthand syntax for object literals.
-    "prefer-arrow-callback": "error", // Require using arrow functions for callbacks.
-    "prefer-const": "error", // Require const declarations for variables that are never reassigned after declared.
-    "prefer-template": "error", // Require template literals instead of string concatenation.
-    "quote-props": ["error", "as-needed"], // Require quotes around object literal property names.
-    eqeqeq: "error", // Require the use of === and !==.
-    indent: ["error", 2], // Enforce consistent indentation.
-    quotes: ["error", "double"], // Enforce the consistent use of either backticks, double, or single quote.
+    "arrow-body-style": "error", // Ensure arrow functions use braces consistently for readability and maintainability.
+    "comma-dangle": "error", // Prevent or enforce trailing commas to keep version control diffs cleaner.
+    "func-style": ["error", "expression", { allowArrowFunctions: true }], // Encourage consistent function declaration style, improving readability.
+    "no-duplicate-imports": "error", // Avoid importing the same module multiple times to reduce redundancy.
+    "no-empty": "error", // Prevent empty blocks that may indicate unfinished code or logical errors.
+    "no-multi-spaces": "error", // Disallow unnecessary multiple spaces to keep code clean and aligned.
+    "no-multiple-empty-lines": ["error", { max: 1 }], // Limit consecutive empty lines to improve code readability.
+    "no-restricted-syntax": ["error", "SwitchStatement"], // Prevent specific syntax constructs that may introduce complexity or bugs.
+    "no-trailing-spaces": "error", // Remove unnecessary trailing whitespace for cleaner code.
+    "no-useless-catch": "error", // Disallow catch blocks that only rethrow, to reduce redundant code.
+    "no-useless-constructor": "error", // Prevent empty or redundant constructors that serve no purpose.
+    "no-useless-rename": "error", // Avoid renaming imports/exports to the same name for clarity and simplicity.
+    "no-useless-return": "error", // Prevent return statements that have no effect, simplifying control flow.
+    "no-var": "error", // Enforce modern variable declarations using let/const for block scoping.
+    "object-shorthand": "error", // Encourage concise syntax for object properties and methods.
+    "prefer-arrow-callback": "error", // Promote arrow functions for callbacks to maintain lexical this context.
+    "prefer-const": "error", // Encourage using const for variables that are never reassigned, improving clarity.
+    "prefer-template": "error", // Use template literals for string concatenation for better readability.
+    "quote-props": ["error", "as-needed"], // Only quote object keys when necessary to reduce visual clutter.
+    eqeqeq: "error", // Require strict equality (===) to avoid type-coercion bugs.
+    indent: ["error", 2], // Enforce consistent 2-space indentation for readability.
+    quotes: ["error", "double"], // Enforce double quotes for consistent string formatting.
 
-    "@typescript-eslint/consistent-type-definitions": ["error", "type"], // Enforce type definitions to consistently use either interface or type.
-    "@typescript-eslint/consistent-type-exports": "error", // Enforce consistent usage of type exports.
-    "@typescript-eslint/consistent-type-imports": "error", // Enforce consistent usage of type imports.
-    "@typescript-eslint/explicit-function-return-type": "error", // Require explicit return types on functions and class methods.
-    "@typescript-eslint/explicit-member-accessibility": "error", // Require explicit accessibility modifiers on class properties and methods.
-    "@typescript-eslint/prefer-readonly": "error", // Require private members to be marked as readonly if they're never modified outside of the constructor.
-    "@typescript-eslint/strict-boolean-expressions": "error", // Disallow certain types in boolean expressions.
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"], // Encourage consistent usage of type aliases over interfaces where chosen.
+    "@typescript-eslint/consistent-type-exports": "error", // Ensure type exports are handled consistently for clarity.
+    "@typescript-eslint/consistent-type-imports": "error", // Keep type imports consistent to improve readability and maintainability.
+    "@typescript-eslint/explicit-function-return-type": "error", // Force explicit return types to make function behavior clear.
+    "@typescript-eslint/explicit-member-accessibility": "error", // Make class member visibility explicit to improve readability and design clarity.
+    "@typescript-eslint/prefer-readonly": "error", // Encourage marking private members as readonly to avoid accidental mutation.
+    "@typescript-eslint/strict-boolean-expressions": "error", // Prevent ambiguous boolean usage, making conditions safer and clearer.
     "@typescript-eslint/typedef": [
-      // Require type annotations in certain places.
       "error",
       {
-        arrayDestructuring: true, // Whether to enforce type annotations on variables declared using array destructuring.
-        arrowParameter: true, // Whether to enforce type annotations for parameters of arrow functions.
-        memberVariableDeclaration: true, // Whether to enforce type annotations on member variables of classes.
-        objectDestructuring: true, // Whether to enforce type annotations on variables declared using object destructuring.
-        parameter: true, // Whether to enforce type annotations for parameters of functions and methods.
-        propertyDeclaration: true, // Whether to enforce type annotations for properties of interfaces and types.
-        variableDeclaration: true, // Whether to enforce type annotations for variable declarations, excluding array and object destructuring.
-        variableDeclarationIgnoreFunction: true // Whether to ignore variable declarations for non-arrow and arrow functions.
+        arrayDestructuring: true, // Require explicit types for destructured arrays for clarity.
+        arrowParameter: true, // Force type annotations on arrow function parameters for readability.
+        memberVariableDeclaration: true, // Require explicit types for class members to improve maintainability.
+        objectDestructuring: true, // Require explicit types for destructured objects to prevent errors.
+        parameter: true, // Ensure function/method parameters have explicit types for clarity.
+        propertyDeclaration: true, // Require types on properties in interfaces/types to avoid implicit any.
+        variableDeclaration: true, // Enforce explicit types on variables to increase code safety.
+        variableDeclarationIgnoreFunction: true // Allow ignoring function expressions but require other variables to have types.
       }
     ]
   }

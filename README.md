@@ -98,19 +98,9 @@ neatlint
 
 Briefly as follows.
 
-> TypeScript
+> **📁 ./eslint.config.ts**
 >
 > ```typescript
-> // 📁 ./eslint.config.ts
-> import { Neatlint, type Types as NeatlintTypes } from "neatlint";
->
-> export default Neatlint();
-> ```
->
-> JavaScript
->
-> ```javascript
-> // 📁 ./eslint.config.js
 > import { Neatlint } from "neatlint";
 >
 > export default Neatlint();

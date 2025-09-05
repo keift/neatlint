@@ -137,7 +137,7 @@ Read file asynchronous.
 
 Suggested uses are as follows. We recommend using Prettier.
 
-> 📁 ./eslint.config.ts
+> **📁 ./eslint.config.ts**
 >
 > ```typescript
 > import { Neatlint } from "neatlint";
@@ -145,7 +145,7 @@ Suggested uses are as follows. We recommend using Prettier.
 > export default Neatlint();
 > ```
 >
-> 📁 ./tsconfig.json
+> **📁 ./tsconfig.json**
 >
 > ```json
 > {
@@ -163,7 +163,7 @@ Suggested uses are as follows. We recommend using Prettier.
 > }
 > ```
 >
-> 📁 ./.prettierrc.json
+> **📁 ./.prettierrc.json**
 >
 > ```json
 > {

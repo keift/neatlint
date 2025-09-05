@@ -8,21 +8,18 @@
 [Function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function
 [Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [Void]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Undefined
-[ReadOptionsDefault]: https://github.com/fabiospampinato/atomically/blob/master/src/constants.ts#L15
-[WriteOptionsDefault]: https://github.com/fabiospampinato/atomically/blob/master/src/constants.ts#L17
-[Fs]: ./src/types/Fs.type.ts
-[ReadOptions]: https://github.com/fabiospampinato/atomically/blob/master/src/types.ts#L16
-[WriteOptions]: https://github.com/fabiospampinato/atomically/blob/master/src/types.ts#L22
+[NeatlintOptionsDefault]: https://github.com/keift/neatlint/blob/main/src/defaults/NeatlintOptions.default.ts
+[NeatlintOptions]: https://github.com/keift/neatlint/blob/main/src/types/NeatlintOptions.type.ts
 
 <div align="center">
   <br/>
   <img src="https://i.ibb.co/KpF1K8Zq/unknown.png" width="450px"/>
   <br/>
   <br/>
-  <img src="https://img.shields.io/npm/v/nice-eslint?label=version&color=%23633BFF"/>
-  <img src="https://img.shields.io/npm/l/nice-eslint?label=license&color=%23633BFF"/>
-  <img src="https://img.shields.io/npm/dt/nice-eslint?label=downloads&color=%2300927F"/>
-  <img src="https://img.shields.io/npm/unpacked-size/nice-eslint?label=size&color=%2300927F"/>
+  <img src="https://img.shields.io/npm/v/neatlint?label=version&color=%23633BFF"/>
+  <img src="https://img.shields.io/npm/l/neatlint?label=license&color=%23633BFF"/>
+  <img src="https://img.shields.io/npm/dt/neatlint?label=downloads&color=%2300927F"/>
+  <img src="https://img.shields.io/npm/unpacked-size/neatlint?label=size&color=%2300927F"/>
 </div>
 
 ## Contents
@@ -34,6 +31,7 @@
   - [Tree](#tree)
   - [Import](#import)
   - [Methods](#methods)
+  - [What does it do?](#what-does-it-do)
   - [Types](#types)
 - [Links](#links)
   - [Discord](https://discord.gg/keift)
@@ -44,14 +42,19 @@
 
 ## About
 
-Trusty file methods.
+Strict ESLint presets for modern TypeScript projects.
 
 ## Features
 
-- Respects CommonJS
-- Secure with [Atomically](https://github.com/fabiospampinato/atomically)
-- Functional with [FS Extra](https://github.com/jprichardson/node-fs-extra)
-- Stable with [Graceful FS](https://github.com/isaacs/node-graceful-fs)
+- Requires types to be specified
+- Requires use of arrow functions
+- Requires the use of backtick
+- Requires specifying read only in classes
+- Requires specifying accessibility in classes
+- Forbids interfaces, only types are used
+- Use of `var` is prohibited and it warns against using `const` and `let` when necessary
+- Unnecessary quotes are prevented on objects, requiring the use of double or single quotes
+- ... and more!
 
 ## Installation
 
@@ -59,19 +62,19 @@ You can install it as follows.
 
 ```shell
 // NPM
-npm install trufs
+npm install neatlint
 
 // PNPM
-pnpm install trufs
+pnpm install neatlint
 
 // Yarn
-yarn add trufs
+yarn add neatlint
 
 // Bun
-bun add trufs
+bun add neatlint
 
 // Deno
-deno install npm:trufs
+deno install npm:neatlint
 ```
 
 ## Documentation
@@ -81,125 +84,68 @@ deno install npm:trufs
 Briefly as follows.
 
 ```typescript
-Trufs
+neatlint
 │
-├── fs
-│   │
-│   ├── readFile(filepath, options?)
-│   ├── readFileSync(filepath, options?)
-│   ├── writeFile(filepath, data, options?)
-│   └── writeFileSync(filepath, data, options?)
+├── Neatlint(options?)
 │
 └── type Types
     │
-    ├── Fs
-    ├── ReadOptions
-    └── WriteOptions
+    └── NeatlintOptions
 ```
 
 ### Import
 
-It is enough to change the `fs` to `trufs`.
+Briefly as follows.
 
 > TypeScript
 >
-> ```diff
-> - import fs from "fs";
-> + import { fs, type Types as TrufsTypes } from "trufs";
+> ```typescript
+> # ./eslint.config.ts
+> import { Neatlint, type Types as NeatlintTypes } from "neatlint";
+>
+> export default Neatlint();
 > ```
 >
 > JavaScript
 >
-> ```diff
-> - import fs from "fs";
-> + import { fs } from "trufs";
+> ```javascript
+> # ./eslint.config.js
+> import { Neatlint } from "neatlint";
+>
+> export default Neatlint();
 > ```
 
 ### Methods
 
-`fs.readFile(filepath, options?)`
+`Neatlint(options?)`
 
 Read file asynchronous.
 
-> | Parameter | Default              | Description                                |
-> | --------- | -------------------- | ------------------------------------------ |
-> | filepath  |                      | [String]<br/>File path to read.            |
-> | options   | [ReadOptionsDefault] | [ReadOptions] (optional)<br/>Read options. |
+> | Parameter | Default                  | Description                                        |
+> | --------- | ------------------------ | -------------------------------------------------- |
+> | options   | [NeatlintOptionsDefault] | [NeatlintOptions] (optional)<br/>Neatlint options. |
 >
-> returns [Promise]<[String] | [Buffer]>
->
-> Example:
->
-> ```typescript
-> await fs.readFile("./config.json");
-> ```
-
-<br/>
-
-`fs.readFileSync(filepath, options?)`
-
-Read file synchronous.
-
-> | Parameter | Default              | Description                                |
-> | --------- | -------------------- | ------------------------------------------ |
-> | filepath  |                      | [String]<br/>File path to read.            |
-> | options   | [ReadOptionsDefault] | [ReadOptions] (optional)<br/>Read options. |
->
-> returns [String] | [Buffer]
+> returns [Object]
 >
 > Example:
 >
 > ```typescript
-> fs.readFileSync("./config.json");
+> export default Neatlint();
 > ```
 
-<br/>
+### What does it do?
 
-`fs.writeFile(filepath, data, options?)`
+Neatlint offers strict ESLint settings.
 
-Write file asynchronous.
-
-> | Parameter | Default               | Description                                  |
-> | --------- | --------------------- | -------------------------------------------- |
-> | filepath  |                       | [String]<br/>File path to write.             |
-> | data      |                       | [String] \| [Buffer]<br/>Data to be written. |
-> | options   | [WriteOptionsDefault] | [WriteOptions] (optional)<br/>Write options. |
->
-> returns [Promise]<[Void]>
->
-> Example:
->
-> ```typescript
-> await fs.writeFile("./config.json", JSON.stringify({}));
-> ```
-
-<br/>
-
-`fs.writeFileSync(filepath, data, options?)`
-
-Write file synchronous.
-
-> | Parameter | Default               | Description                                  |
-> | --------- | --------------------- | -------------------------------------------- |
-> | filepath  |                       | [String]<br/>File path to write.             |
-> | data      |                       | [String] \| [Buffer]<br/>Data to be written. |
-> | options   | [WriteOptionsDefault] | [WriteOptions] (optional)<br/>Write options. |
->
-> returns [Void]
->
-> Example:
->
-> ```typescript
-> fs.writeFileSync("./config.json", JSON.stringify({}));
-> ```
+| Rule              | Default | Description |
+| ----------------- | ------- | ----------- |
+| [NeatlintOptions] | Default |             |
 
 ### Types
 
-| Type           |
-| -------------- |
-| [Fs]           |
-| [ReadOptions]  |
-| [WriteOptions] |
+| Type              |
+| ----------------- |
+| [NeatlintOptions] |
 
 ## Links
 

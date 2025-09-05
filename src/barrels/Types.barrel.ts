@@ -1,1 +1,1 @@
-export type { BestlintOptions } from "../types/BestlintOptions.type"
+export type { NeatlintOptions } from "../types/NeatlintOptions.type";

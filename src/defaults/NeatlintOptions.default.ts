@@ -1,7 +1,18 @@
-import type { BestlintOptions } from "../types/BestlintOptions.type";
+import TSEslint from "typescript-eslint";
 
-export const BestlintOptionsDefault: BestlintOptions = {
+import type { NeatlintOptions } from "../types/NeatlintOptions.type";
+
+export const NeatlintOptionsDefault: NeatlintOptions = {
   ignores: ["./dist/**"],
+  files: ["**/*.ts"],
+  languageOptions: {
+    parser: TSEslint.parser,
+    parserOptions: {
+      project: "./tsconfig.json",
+      sourceType: "module"
+    }
+  },
+  plugins: {},
   rules: {
     "arrow-body-style": "error", // Require braces around arrow function bodies.
     "comma-dangle": "error", // Require or disallow trailing commas.

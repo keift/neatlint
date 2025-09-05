@@ -1,3 +1,3 @@
-import { Bestlint } from "./src/main";
+import { Neatlint } from "./src/main";
 
-export default Bestlint();
+export default Neatlint();

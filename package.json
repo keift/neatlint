@@ -1,10 +1,10 @@
 {
   "name": "neatlint",
   "version": "1.0.0",
-  "description": "Trusty file methods.",
+  "description": "Strict ESLint presets for modern TypeScript projects.",
   "license": "MIT",
-  "homepage": "https://github.com/keift/bestlint",
-  "bugs": "https://github.com/keift/bestlint/issues",
+  "homepage": "https://github.com/keift/neatlint",
+  "bugs": "https://github.com/keift/neatlint/issues",
   "main": "./dist/main.js",
   "module": "./dist/main.mjs",
   "types": "./dist/main.d.ts",
@@ -26,16 +26,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/keift/bestlint"
+    "url": "https://github.com/keift/neatlint"
   },
   "keywords": [
-    "fs",
-    "file-system",
-    "atomically",
-    "fs-extra",
-    "graceful-fs",
-    "atomic",
-    "atomic-reads",
-    "atomic-writes"
+    "eslint",
+    "typescript-eslint"
   ]
 }

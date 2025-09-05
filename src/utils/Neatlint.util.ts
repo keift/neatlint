@@ -1,4 +1,4 @@
-import TypeScriptEslint from "typescript-eslint";
+import TSEslint from "typescript-eslint";
 import _ from "lodash";
 
 import { NeatlintOptionsDefault } from "../defaults/NeatlintOptions.default";
@@ -9,19 +9,20 @@ export const Neatlint = (options: NeatlintOptions = NeatlintOptionsDefault): obj
   options = _.merge({}, NeatlintOptionsDefault, options);
 
   return [
-    { ignores: ["./dist/**"] },
-    ...TypeScriptEslint.configs.strict,
+    { ignores: options.ignores },
+    ...TSEslint.configs.strict,
     {
-      files: options.files,
-      languageOptions: {
-        parser: TypeScriptEslint.parser,
-        parserOptions: {
-          project: "./tsconfig.json",
-          sourceType: "module"
-        }
-      },
-      plugins: options.plugins,
-      rules: options.rules
+      files: options.typescript.files,
+      languageOptions: options.typescript.languageOptions,
+      plugins: options.typescript.plugins,
+      rules: options.typescript.rules
+    },
+    {
+      files: options.javascript.files,
+      languageOptions: options.javascript.languageOptions,
+      plugins: options.javascript.plugins,
+      rules: options.javascript.rules
     }
   ];
 };
+

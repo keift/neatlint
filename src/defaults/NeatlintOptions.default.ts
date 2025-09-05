@@ -4,7 +4,7 @@ import type { NeatlintOptions } from "../types/NeatlintOptions.type";
 
 export const NeatlintOptionsDefault: NeatlintOptions = {
   ignores: ["./dist/**"],
-  files: ["**/*.ts", "**/*.js"],
+  files: ["**/*.ts"],
   languageOptions: {
     parser: TSEslint.parser,
     parserOptions: {
@@ -42,20 +42,8 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/explicit-function-return-type": "error",
     "@typescript-eslint/explicit-member-accessibility": "error",
+    "@typescript-eslint/no-inferrable-types": "error",
     "@typescript-eslint/prefer-readonly": "error",
-    "@typescript-eslint/strict-boolean-expressions": "error",
-    "@typescript-eslint/typedef": [
-      "error",
-      {
-        arrayDestructuring: true,
-        arrowParameter: true,
-        memberVariableDeclaration: true,
-        objectDestructuring: true,
-        parameter: true,
-        propertyDeclaration: true,
-        variableDeclaration: true,
-        variableDeclarationIgnoreFunction: true
-      }
-    ]
+    "@typescript-eslint/strict-boolean-expressions": "error"
   }
 };

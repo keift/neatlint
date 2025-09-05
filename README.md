@@ -46,7 +46,7 @@ Strict ESLint presets for modern TypeScript projects.
 
 ## Features
 
-- Requires types to be specified
+- Requires not using unnecessary types
 - Requires use of arrow functions
 - Requires the use of backtick
 - Requires specifying read only in classes

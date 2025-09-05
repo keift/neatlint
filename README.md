@@ -31,6 +31,7 @@
   - [Tree](#tree)
   - [Import](#import)
   - [Methods](#methods)
+  - [Recommended use](#recommended-use)
   - [What does it do?](#what-does-it-do)
   - [Types](#types)
 - [Links](#links)

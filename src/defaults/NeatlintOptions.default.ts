@@ -15,6 +15,7 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
       }
     },
     plugins: {},
+
     rules: {
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       "@typescript-eslint/consistent-type-exports": "error",
@@ -31,6 +32,7 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
     files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.mjs", "**/*.cjs"],
     languageOptions: {},
     plugins: {},
+
     rules: {
       "arrow-body-style": "error",
       "func-style": ["error", "expression", { allowArrowFunctions: true }],

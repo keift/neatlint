@@ -4,8 +4,8 @@ import type { NeatlintOptions } from "../types/NeatlintOptions.type";
 
 export const NeatlintOptionsDefault: NeatlintOptions = {
   ignores: ["./dist/**"],
-  typescript: {
-    files: ["**/*.ts"],
+  typescript_eslint: {
+    files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parser: TSEslint.parser,
       parserOptions: {
@@ -25,8 +25,8 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
       "@typescript-eslint/strict-boolean-expressions": "error"
     }
   },
-  javascript: {
-    files: ["**/*.ts", "**/*.js"],
+  eslint: {
+    files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.mjs", "**/*.cjs"],
     languageOptions: {},
     plugins: {},
     rules: {

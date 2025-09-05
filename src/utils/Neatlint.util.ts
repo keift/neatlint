@@ -12,16 +12,16 @@ export const Neatlint = (options: NeatlintOptions = NeatlintOptionsDefault): obj
     { ignores: options.ignores },
     ...TSEslint.configs.strict,
     {
-      files: options.typescript.files,
-      languageOptions: options.typescript.languageOptions,
-      plugins: options.typescript.plugins,
-      rules: options.typescript.rules
+      files: options.typescript_eslint.files,
+      languageOptions: options.typescript_eslint.languageOptions,
+      plugins: options.typescript_eslint.plugins,
+      rules: options.typescript_eslint.rules
     },
     {
-      files: options.javascript.files,
-      languageOptions: options.javascript.languageOptions,
-      plugins: options.javascript.plugins,
-      rules: options.javascript.rules
+      files: options.eslint.files,
+      languageOptions: options.eslint.languageOptions,
+      plugins: options.eslint.plugins,
+      rules: options.eslint.rules
     }
   ];
 };

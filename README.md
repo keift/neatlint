@@ -133,6 +133,50 @@ Read file asynchronous.
 > export default Neatlint();
 > ```
 
+### Recommended use
+
+Suggested uses are as follows. We recommend using Prettier.
+
+> 📁 ./eslint.config.ts
+>
+> ```typescript
+> import { Neatlint } from "neatlint";
+>
+> export default Neatlint();
+> ```
+>
+> 📁 ./tsconfig.json
+>
+> ```json
+> {
+>   "compilerOptions": {
+>     "strict": true,
+>     "esModuleInterop": true,
+>
+>     "target": "ES2020",
+>     "module": "esnext",
+>     "moduleResolution": "bundler",
+>     "lib": ["dom", "ES2020"],
+>
+>     "typeRoots": ["./types", "./node_modules/@types"]
+>   }
+> }
+> ```
+>
+> 📁 ./.prettierrc.json
+>
+> ```json
+> {
+>   "semi": true,
+>   "singleQuote": false,
+>
+>   "printWidth": 9999,
+>   "tabWidth": 2,
+>
+>   "trailingComma": "none"
+> }
+> ```
+
 ### What does it do?
 
 Neatlint offers strict ESLint settings.

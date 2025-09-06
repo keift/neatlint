@@ -5,6 +5,7 @@ export type NeatlintOptions = {
     files: string[];
     languageOptions: object;
     plugins: Record<string, unknown>;
+    extends: string[];
 
     rules: Record<string, string | object>;
   };
@@ -13,6 +14,7 @@ export type NeatlintOptions = {
     files: string[];
     languageOptions: object;
     plugins: Record<string, unknown>;
+    extends: string[];
 
     rules: Record<string, string | object>;
   };

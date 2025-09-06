@@ -170,21 +170,17 @@ Suggested uses are as follows. We recommend using Prettier.
 
 ### What does it do?
 
-Neatlint offers strict ESLint settings.
+Neatlint offers strict ESLint settings. These rules also include: [strict-type-checked](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslintrc/strict-type-checked.ts), [stylistic-type-checked](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslintrc/stylistic-type-checked.ts) and [eslint-recommended](https://www.npmjs.com/package/@eslint/js).
 
 | Rule                                                                                                                     | Description                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | [arrow-body-style](https://eslint.org/docs/latest/rules/arrow-body-style)                                                | Require braces around arrow function bodies.                                                                 |
 | [func-style](https://eslint.org/docs/latest/rules/func-style)                                                            | Enforce the consistent use of either function declarations or expressions assigned to variables.             |
 | [no-duplicate-imports](https://eslint.org/docs/latest/rules/no-duplicate-imports)                                        | Disallow duplicate module imports.                                                                           |
-| [no-empty](https://eslint.org/docs/latest/rules/no-empty)                                                                | Disallow empty block statements.                                                                             |
 | [no-restricted-syntax](https://eslint.org/docs/latest/rules/no-restricted-syntax)                                        | Disallow specified syntax.                                                                                   |
-| [no-useless-backreference](https://eslint.org/docs/latest/rules/no-useless-backreference)                                | Disallow useless backreferences in regular expressions.                                                      |
 | [no-useless-computed-key](https://eslint.org/docs/latest/rules/no-useless-computed-key)                                  | Disallow unnecessary computed property keys in objects and classes.                                          |
-| [no-useless-catch](https://eslint.org/docs/latest/rules/no-useless-catch)                                                | Disallow unnecessary catch clauses.                                                                          |
 | [no-useless-concat](https://eslint.org/docs/latest/rules/no-useless-concat)                                              | Disallow unnecessary concatenation of literals or template literals.                                         |
 | [no-useless-constructor](https://eslint.org/docs/latest/rules/no-useless-constructor)                                    | Disallow unnecessary constructors.                                                                           |
-| [no-useless-escape](https://eslint.org/docs/latest/rules/no-useless-escape)                                              | Disallow unnecessary escape characters.                                                                      |
 | [no-useless-rename](https://eslint.org/docs/latest/rules/no-useless-rename)                                              | Disallow renaming import, export, and destructured assignments to the same name.                             |
 | [no-useless-return](https://eslint.org/docs/latest/rules/no-useless-return)                                              | Disallow redundant return statements.                                                                        |
 | [no-var](https://eslint.org/docs/latest/rules/no-var)                                                                    | Require let or const instead of var.                                                                         |
@@ -198,19 +194,7 @@ Neatlint offers strict ESLint settings.
 | [@typescript-eslint/consistent-type-imports](https://typescript-eslint.io/rules/consistent-type-imports)                 | Enforce consistent usage of type imports.                                                                    |
 | [@typescript-eslint/explicit-function-return-type](https://typescript-eslint.io/rules/explicit-function-return-type)     | Require explicit return types on functions and class methods.                                                |
 | [@typescript-eslint/explicit-member-accessibility](https://typescript-eslint.io/rules/explicit-member-accessibility)     | Require explicit accessibility modifiers on class properties and methods.                                    |
-| [@typescript-eslint/no-inferrable-types](https://typescript-eslint.io/rules/no-inferrable-types)                         | Disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean. |
-| [@typescript-eslint/no-unsafe-argument](https://typescript-eslint.io/rules/no-unsafe-argument)                           | Disallow calling a function with a value with type any.                                                      |
-| [@typescript-eslint/no-unsafe-assignment](https://typescript-eslint.io/rules/no-unsafe-assignment)                       | Disallow assigning a value with type any to variables and properties.                                        |
-| [@typescript-eslint/no-unsafe-call](https://typescript-eslint.io/rules/no-unsafe-call)                                   | Disallow calling a value with type any.                                                                      |
-| [@typescript-eslint/no-unsafe-declaration-merging](https://typescript-eslint.io/rules/no-unsafe-declaration-merging)     | Disallow unsafe declaration merging.                                                                         |
-| [@typescript-eslint/no-unsafe-enum-comparison](https://typescript-eslint.io/rules/no-unsafe-enum-comparison)             | Disallow comparing an enum value with a non-enum value.                                                      |
-| [@typescript-eslint/no-unsafe-function-type](https://typescript-eslint.io/rules/no-unsafe-function-type)                 | Disallow using the unsafe built-in Function type.                                                            |
-| [@typescript-eslint/no-unsafe-member-access](https://typescript-eslint.io/rules/no-unsafe-member-access)                 | Disallow member access on a value with type any.                                                             |
-| [@typescript-eslint/no-unsafe-return](https://typescript-eslint.io/rules/no-unsafe-return)                               | Disallow returning a value with type any from a function.                                                    |
-| [@typescript-eslint/no-unsafe-type-assertion](https://typescript-eslint.io/rules/no-unsafe-type-assertion)               | Disallow type assertions that narrow a type.                                                                 |
-| [@typescript-eslint/no-unsafe-unary-minus](https://typescript-eslint.io/rules/no-unsafe-unary-minus)                     | Require unary negation to take a number.                                                                     |
 | [@typescript-eslint/prefer-readonly](https://typescript-eslint.io/rules/prefer-readonly)                                 | Require private members to be marked as readonly if they're never modified outside of the constructor.       |
-| [@typescript-eslint/prefer-readonly-parameter-types](https://typescript-eslint.io/rules/prefer-readonly-parameter-types) | Require function parameters to be typed as readonly to prevent accidental mutation of inputs.                |
 | [@typescript-eslint/strict-boolean-expressions](https://typescript-eslint.io/rules/strict-boolean-expressions)           | Disallow certain types in boolean expressions.                                                               |
 
 ### Types

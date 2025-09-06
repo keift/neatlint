@@ -170,6 +170,7 @@ Suggested uses are as follows. We recommend using Prettier.
 
 ### What does it do?
 
+
 Neatlint offers strict ESLint settings. These rules also include [strict-type-checked](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslintrc/strict-type-checked.ts), [stylistic-type-checked](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslintrc/stylistic-type-checked.ts) and [eslint-recommended](https://npmjs.com/package/@eslint/js).
 
 | Rule                                                                                                                 | Description                                                                                            |

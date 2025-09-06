@@ -1,5 +1,5 @@
 import TSESLint from "typescript-eslint";
-import ESLintJS from "@eslint/js"
+import ESLintJS from "@eslint/js";
 import _ from "lodash";
 
 import { NeatlintOptionsDefault } from "../defaults/NeatlintOptions.default";

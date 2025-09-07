@@ -1,4 +1,4 @@
-import TSESLint from "typescript-eslint"
+import TSESLint from "typescript-eslint";
 import _ from "lodash";
 
 import { NeatlintOptionsDefault } from "../defaults/NeatlintOptions.default";

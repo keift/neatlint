@@ -15,7 +15,6 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
       }
     },
     plugins: {},
-    extends: [],
 
     rules: {
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
@@ -23,6 +22,7 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
       "@typescript-eslint/consistent-type-imports": "error",
       "@typescript-eslint/explicit-function-return-type": "error",
       "@typescript-eslint/explicit-member-accessibility": "error",
+      "@typescript-eslint/no-inferrable-types": "error",
       "@typescript-eslint/prefer-readonly": "error",
       "@typescript-eslint/strict-boolean-expressions": "error"
     }
@@ -32,7 +32,6 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
     files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.mjs", "**/*.cjs"],
     languageOptions: {},
     plugins: {},
-    extends: [],
 
     rules: {
       "arrow-body-style": "error",

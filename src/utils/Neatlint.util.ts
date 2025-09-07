@@ -1,5 +1,4 @@
-import TSESLint from "typescript-eslint";
-import ESLintJS from "@eslint/js";
+import TSESLint from "typescript-eslint"
 import _ from "lodash";
 
 import { NeatlintOptionsDefault } from "../defaults/NeatlintOptions.default";
@@ -12,9 +11,7 @@ export const Neatlint = (options: NeatlintOptions = NeatlintOptionsDefault): obj
   return [
     { ignores: options.ignores },
 
-    ...TSESLint.configs.strictTypeChecked,
-    ...TSESLint.configs.stylisticTypeChecked,
-    ESLintJS.configs.recommended,
+    ...TSESLint.configs.strict,
 
     {
       files: options.typescript_eslint.files,

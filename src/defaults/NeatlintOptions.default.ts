@@ -6,34 +6,6 @@ import type { NeatlintOptions } from "../types/NeatlintOptions.type";
 export const NeatlintOptionsDefault: NeatlintOptions = {
   ignores: ["./dist/**"],
 
-  typescript: {
-    files: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
-    languageOptions: {
-      parser: TSESLint.parser,
-      parserOptions: {
-        project: "./tsconfig.json",
-        sourceType: "module"
-      }
-    },
-    plugins: {
-      "@typescript-eslint": TSESLint.plugin
-    },
-
-    rules: {
-      ...(Object.assign({}, ...TSESLint.configs.strictTypeChecked.map((item) => item.rules ?? {})) as Record<string, unknown>),
-      ...(Object.assign({}, ...TSESLint.configs.stylisticTypeChecked.map((item) => item.rules ?? {})) as Record<string, unknown>),
-
-      "@typescript-eslint/consistent-type-definitions": ["error", "type"], // stylisticTypeChecked but different
-      "@typescript-eslint/consistent-type-exports": "error",
-      "@typescript-eslint/consistent-type-imports": "error",
-      "@typescript-eslint/explicit-function-return-type": "error",
-      "@typescript-eslint/explicit-member-accessibility": "error",
-      "@typescript-eslint/no-inferrable-types": "error", // stylisticTypeChecked
-      "@typescript-eslint/prefer-readonly": "error",
-      "@typescript-eslint/strict-boolean-expressions": "error"
-    }
-  },
-
   javascript: {
     files: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts", "**/*.js", "**/*.jsx", "**/*.mjs", "**/*.cjs"],
     languageOptions: {},
@@ -59,6 +31,34 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
       "prefer-template": "error",
       "require-await": "error",
       eqeqeq: "error"
+    }
+  },
+
+  typescript: {
+    files: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
+    languageOptions: {
+      parser: TSESLint.parser,
+      parserOptions: {
+        project: "./tsconfig.json",
+        sourceType: "module"
+      }
+    },
+    plugins: {
+      "@typescript-eslint": TSESLint.plugin
+    },
+
+    rules: {
+      ...(Object.assign({}, ...TSESLint.configs.strictTypeChecked.map((item) => item.rules ?? {})) as Record<string, unknown>),
+      ...(Object.assign({}, ...TSESLint.configs.stylisticTypeChecked.map((item) => item.rules ?? {})) as Record<string, unknown>),
+
+      "@typescript-eslint/consistent-type-definitions": ["error", "type"], // stylisticTypeChecked but different
+      "@typescript-eslint/consistent-type-exports": "error",
+      "@typescript-eslint/consistent-type-imports": "error",
+      "@typescript-eslint/explicit-function-return-type": "error",
+      "@typescript-eslint/explicit-member-accessibility": "error",
+      "@typescript-eslint/no-inferrable-types": "error", // stylisticTypeChecked
+      "@typescript-eslint/prefer-readonly": "error",
+      "@typescript-eslint/strict-boolean-expressions": "error"
     }
   }
 };

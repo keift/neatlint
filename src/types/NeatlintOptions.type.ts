@@ -1,7 +1,7 @@
 export type NeatlintOptions = {
   ignores?: string[];
 
-  typescript?: {
+  javascript?: {
     files?: string[];
     languageOptions?: object;
     plugins?: Record<string, unknown>;
@@ -9,7 +9,7 @@ export type NeatlintOptions = {
     rules?: Record<string, string | object>;
   };
 
-  javascript?: {
+  typescript?: {
     files?: string[];
     languageOptions?: object;
     plugins?: Record<string, unknown>;

@@ -20,8 +20,8 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
     },
 
     rules: {
-      ...Object.assign({}, ...TSESLint.configs.strictTypeChecked.map((item) => item.rules ?? {}))as Record<string, unknown>,
-      ...Object.assign({}, ...TSESLint.configs.stylisticTypeChecked.map((item) => item.rules ?? {}))as Record<string, unknown>,
+      ...(Object.assign({}, ...TSESLint.configs.strictTypeChecked.map((item) => item.rules ?? {})) as Record<string, unknown>),
+      ...(Object.assign({}, ...TSESLint.configs.stylisticTypeChecked.map((item) => item.rules ?? {})) as Record<string, unknown>),
 
       "@typescript-eslint/consistent-type-definitions": ["error", "type"], // stylisticTypeChecked but different
       "@typescript-eslint/consistent-type-exports": "error",

@@ -1,19 +1,26 @@
 export type NeatlintOptions = {
-  ignores: string[];
+  ignores?: string[];
 
-  typescript_eslint: {
-    files: string[];
-    languageOptions: object;
-    plugins: Record<string, unknown>;
+  typescript?: {
+    files?: string[];
+    languageOptions?: object;
+    plugins?: Record<string, unknown>;
 
-    rules: Record<string, string | object>;
+    rules?: Record<string, string | object>;
   };
 
-  eslint: {
+  javascript?: {
+    files?: string[];
+    languageOptions?: object;
+    plugins?: Record<string, unknown>;
+
+    rules?: Record<string, string | object>;
+  };
+
+  config?: {
     files: string[];
-    languageOptions: object;
-    plugins: Record<string, unknown>;
+    [key: string]: unknown;
 
     rules: Record<string, string | object>;
-  };
+  }[];
 };

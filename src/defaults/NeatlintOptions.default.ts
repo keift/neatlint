@@ -1,12 +1,13 @@
 import TSESLint from "typescript-eslint";
+import ESLintJS from "@eslint/js";
 
 import type { NeatlintOptions } from "../types/NeatlintOptions.type";
 
 export const NeatlintOptionsDefault: NeatlintOptions = {
   ignores: ["./dist/**"],
 
-  typescript_eslint: {
-    files: ["**/*.ts", "**/*.tsx"],
+  typescript: {
+    files: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
     languageOptions: {
       parser: TSESLint.parser,
       parserOptions: {
@@ -14,26 +15,34 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
         sourceType: "module"
       }
     },
-    plugins: {},
+    plugins: {
+      "@typescript-eslint": TSESLint.plugin
+    },
 
     rules: {
-      "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+      ...Object.assign({}, ...TSESLint.configs.strictTypeChecked.map((item) => item.rules ?? {}))as Record<string, unknown>,
+      ...Object.assign({}, ...TSESLint.configs.stylisticTypeChecked.map((item) => item.rules ?? {}))as Record<string, unknown>,
+
+      "@typescript-eslint/consistent-type-definitions": ["error", "type"], // stylisticTypeChecked but different
       "@typescript-eslint/consistent-type-exports": "error",
       "@typescript-eslint/consistent-type-imports": "error",
       "@typescript-eslint/explicit-function-return-type": "error",
       "@typescript-eslint/explicit-member-accessibility": "error",
-      "@typescript-eslint/no-inferrable-types": "error",
+      "@typescript-eslint/no-inferrable-types": "error", // stylisticTypeChecked
       "@typescript-eslint/prefer-readonly": "error",
       "@typescript-eslint/strict-boolean-expressions": "error"
     }
   },
 
-  eslint: {
-    files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.mjs", "**/*.cjs"],
+  javascript: {
+    files: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts", "**/*.js", "**/*.jsx", "**/*.mjs", "**/*.cjs"],
     languageOptions: {},
     plugins: {},
 
     rules: {
+      ...ESLintJS.configs.recommended.rules,
+      "no-undef": "off",
+
       "arrow-body-style": "error",
       "func-style": ["error", "expression", { allowArrowFunctions: true }],
       "no-duplicate-imports": "error",

@@ -84,7 +84,7 @@ deno install npm:neatlint
 Briefly as follows.
 
 ```typescript
-neatlint
+Neatlint
 │
 ├── Neatlint(options?)
 │

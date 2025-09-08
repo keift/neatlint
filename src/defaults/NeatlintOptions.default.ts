@@ -57,6 +57,7 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
       "prefer-arrow-callback": "error",
       "prefer-const": "error",
       "prefer-template": "error",
+      "require-await": "error",
       eqeqeq: "error"
     }
   }

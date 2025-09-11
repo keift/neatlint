@@ -4,6 +4,8 @@ import ESLintJS from "@eslint/js";
 import type { NeatlintOptions } from "../types/NeatlintOptions.type";
 
 export const NeatlintOptionsDefault: NeatlintOptions = {
+  disabled: false,
+
   ignores: ["./dist/**"],
 
   javascript: {

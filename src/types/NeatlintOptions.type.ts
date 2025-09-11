@@ -1,4 +1,6 @@
 export type NeatlintOptions = {
+  disabled?: boolean;
+
   ignores?: string[];
 
   javascript?: {

@@ -88,9 +88,7 @@ Neatlint
 │
 ├── Neatlint(options?)
 │
-└── type Types
-    │
-    └── NeatlintOptions
+└── type NeatlintOptions
 ```
 
 ### Import

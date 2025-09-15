@@ -1,6 +1,6 @@
 {
   "name": "neatlint",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Strict ESLint presets for modern TypeScript projects.",
   "license": "MIT",
   "homepage": "https://github.com/keift/neatlint",
@@ -35,3 +35,4 @@
     "typescript-eslint"
   ]
 }
+

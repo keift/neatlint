@@ -52,8 +52,8 @@ Strict ESLint presets for modern TypeScript projects.
 - Requires specifying read only in classes
 - Requires specifying accessibility in classes
 - Forbids interfaces, only types are used
+- Unnecessary quotes are prevented on objects
 - Use of `var` is prohibited and it warns against using `const` and `let` when necessary
-- Unnecessary quotes are prevented on objects, requiring the use of double or single quotes
 - ... and more!
 
 ## Installation

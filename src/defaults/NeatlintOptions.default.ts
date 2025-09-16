@@ -20,7 +20,7 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
       "arrow-body-style": "error",
       "func-style": ["error", "expression", { allowArrowFunctions: true }],
       "no-duplicate-imports": "error",
-      "no-restricted-syntax": ["error", "SwitchStatement"],
+      "no-restricted-syntax": ["error", "ForInStatement", "WithStatement", "SwitchStatement", "LabeledStatement", "DebuggerStatement", "EmptyStatement"],
       "no-useless-computed-key": "error",
       "no-useless-concat": "error",
       "no-useless-constructor": "error",
@@ -56,7 +56,6 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
       "@typescript-eslint/consistent-type-definitions": ["error", "type"], // stylisticTypeChecked but different
       "@typescript-eslint/consistent-type-exports": "error",
       "@typescript-eslint/consistent-type-imports": "error",
-      "@typescript-eslint/explicit-function-return-type": "error",
       "@typescript-eslint/explicit-member-accessibility": "error",
       "@typescript-eslint/no-inferrable-types": "error", // stylisticTypeChecked
       "@typescript-eslint/prefer-readonly": "error",

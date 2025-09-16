@@ -170,6 +170,7 @@ Suggested uses are as follows. We recommend using [Prettier](https://npmjs.com/p
 
 | Type              |
 | ----------------- |
+| [ESLintConfig]    |
 | [NeatlintOptions] |
 
 ## Links

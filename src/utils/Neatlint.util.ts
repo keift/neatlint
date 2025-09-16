@@ -4,7 +4,7 @@ import { NeatlintOptionsDefault } from "../defaults/NeatlintOptions.default";
 
 import type { NeatlintOptions } from "../types/NeatlintOptions.type";
 
-export const Neatlint = (options: NeatlintOptions = NeatlintOptionsDefault): object => {
+export const Neatlint = (options: NeatlintOptions = NeatlintOptionsDefault) => {
   options = _.merge({}, NeatlintOptionsDefault, options);
 
   return [

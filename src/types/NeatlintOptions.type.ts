@@ -1,28 +1,25 @@
+import type { ESLintConfig } from "../types/ESLintConfig.type";
+
 export type NeatlintOptions = {
   disabled?: boolean;
 
-  ignores?: string[];
+  ignores?: ESLintConfig["ignores"];
 
   javascript?: {
-    files?: string[];
-    languageOptions?: object;
-    plugins?: Record<string, unknown>;
+    files?: ESLintConfig["files"];
+    languageOptions?: ESLintConfig["languageOptions"];
+    plugins?: ESLintConfig["plugins"];
 
-    rules?: Record<string, string | object>;
+    rules?: ESLintConfig["rules"];
   };
 
   typescript?: {
-    files?: string[];
-    languageOptions?: object;
-    plugins?: Record<string, unknown>;
+    files?: ESLintConfig["files"];
+    languageOptions?: ESLintConfig["languageOptions"];
+    plugins?: ESLintConfig["plugins"];
 
-    rules?: Record<string, string | object>;
+    rules?: ESLintConfig["rules"];
   };
 
-  config?: {
-    files: string[];
-    [key: string]: unknown;
-
-    rules: Record<string, string | object>;
-  }[];
+  config?: ESLintConfig[];
 };

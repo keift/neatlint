@@ -2,9 +2,10 @@ import _ from "lodash";
 
 import { NeatlintOptionsDefault } from "../defaults/NeatlintOptions.default";
 
+import type { ESLintConfig } from "../types/ESLintConfig.type";
 import type { NeatlintOptions } from "../types/NeatlintOptions.type";
 
-export const Neatlint = (options: NeatlintOptions = NeatlintOptionsDefault) => {
+export const Neatlint = (options: NeatlintOptions = NeatlintOptionsDefault): ESLintConfig[] => {
   options = _.merge({}, NeatlintOptionsDefault, options);
 
   return [

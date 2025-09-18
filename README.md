@@ -99,7 +99,7 @@ Briefly as follows.
 > **📁 ./eslint.config.ts**
 >
 > ```typescript
-> import { Neatlint } from "neatlint";
+> import { Neatlint } from 'neatlint';
 >
 > export default Neatlint();
 > ```
@@ -129,7 +129,7 @@ Suggested uses are as follows. We recommend using [Prettier](https://npmjs.com/p
 > **📁 ./eslint.config.ts**
 >
 > ```typescript
-> import { Neatlint } from "neatlint";
+> import { Neatlint } from 'neatlint';
 >
 > export default Neatlint();
 > ```
@@ -157,7 +157,7 @@ Suggested uses are as follows. We recommend using [Prettier](https://npmjs.com/p
 > ```json
 > {
 >   "semi": true,
->   "singleQuote": false,
+>   "singleQuote": true,
 >
 >   "printWidth": 9999,
 >   "tabWidth": 2,

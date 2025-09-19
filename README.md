@@ -47,15 +47,13 @@ Strict ESLint presets for modern TypeScript projects.
 
 ## Features
 
-- Requires not using unnecessary types
-- Requires use of arrow functions
-- Requires the use of backtick
-- Requires specifying read only in classes
-- Requires specifying accessibility in classes
-- Forbids interfaces, only types are used
-- Unnecessary quotes are prevented on objects
-- Use of `var` is prohibited and it warns against using `const` and `let` when necessary
-- ... and more!
+- Enforces type safety
+- Encourages modern syntax
+- Prohibits potentially unsafe patterns
+- Requires explicit readonly and accessibility modifiers in classes
+- Disallows interfaces, using only types
+- Bans `var` and warns about proper use of `const` and `let`
+- ...and much more!
 
 ## Installation
 

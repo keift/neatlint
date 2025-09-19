@@ -1,6 +1,7 @@
 import TSESLint from 'typescript-eslint';
 import ESLintJS from '@eslint/js';
 
+import type { ESLintConfig } from '../types/ESLintConfig.type';
 import type { NeatlintOptions } from '../types/NeatlintOptions.type';
 
 export const NeatlintOptionsDefault: NeatlintOptions = {
@@ -15,6 +16,27 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
 
     rules: {
       ...ESLintJS.configs.recommended.rules,
+      ...(Object.assign(
+        {},
+        ...TSESLint.configs.strictTypeChecked.map((item) =>
+          Object.fromEntries(
+            Object.entries(item.rules ?? {})
+              .filter(([key]) => !key.startsWith('@typescript-eslint'))
+              .map(([key]) => [key, 'error'])
+          )
+        )
+      ) as ESLintConfig['rules']),
+      ...(Object.assign(
+        {},
+        ...TSESLint.configs.stylisticTypeChecked.map((item) =>
+          Object.fromEntries(
+            Object.entries(item.rules ?? {})
+              .filter(([key]) => !key.startsWith('@typescript-eslint'))
+              .map(([key]) => [key, 'error'])
+          )
+        )
+      ) as ESLintConfig['rules']),
+      ...TSESLint.configs.eslintRecommended.rules,
       'no-undef': 'off',
 
       'func-style': ['error', 'expression', { allowArrowFunctions: true }],
@@ -24,15 +46,11 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
       'no-useless-call': 'error',
       'no-useless-computed-key': 'error',
       'no-useless-concat': 'error',
-      'no-useless-constructor': 'error',
       'no-useless-rename': 'error',
       'no-useless-return': 'error',
-      'no-var': 'error',
       'object-shorthand': 'error',
       'prefer-arrow-callback': 'error',
-      'prefer-const': 'error',
       'prefer-template': 'error',
-      'require-await': 'error',
       eqeqeq: 'error'
     }
   },
@@ -51,8 +69,8 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
     },
 
     rules: {
-      ...(Object.assign({}, ...TSESLint.configs.strictTypeChecked.map((item) => item.rules ?? {})) as Record<string, unknown>),
-      ...(Object.assign({}, ...TSESLint.configs.stylisticTypeChecked.map((item) => item.rules ?? {})) as Record<string, unknown>),
+      ...(Object.assign({}, ...TSESLint.configs.strictTypeChecked.map((item) => item.rules ?? {})) as ESLintConfig['rules']),
+      ...(Object.assign({}, ...TSESLint.configs.stylisticTypeChecked.map((item) => item.rules ?? {})) as ESLintConfig['rules']),
 
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'], // stylisticTypeChecked but different
       '@typescript-eslint/consistent-type-exports': 'error',

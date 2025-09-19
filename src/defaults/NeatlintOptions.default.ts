@@ -17,7 +17,6 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
       ...ESLintJS.configs.recommended.rules,
       'no-undef': 'off',
 
-      
       'func-style': ['error', 'expression', { allowArrowFunctions: true }],
       'no-duplicate-imports': 'error',
       'no-eval': 'error',

@@ -42,7 +42,7 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
       'func-style': ['error', 'expression', { allowArrowFunctions: true }],
       'no-duplicate-imports': 'error',
       'no-eval': 'error',
-      'no-restricted-syntax': ['error', "CallExpression[callee.name='String']","CallExpression[callee.name='parseFloat']", "CallExpression[callee.property.name='forEach']", 'DebuggerStatement', 'EmptyStatement', 'ForInStatement', 'LabeledStatement', 'SequenceExpression', 'SwitchStatement', 'WithStatement'],
+      'no-restricted-syntax': ['error', "CallExpression[callee.name='String']", "CallExpression[callee.name='parseFloat']", "CallExpression[callee.property.name='forEach']", 'DebuggerStatement', 'EmptyStatement', 'ForInStatement', 'LabeledStatement', 'SequenceExpression', 'SwitchStatement', 'WithStatement'],
       'no-useless-call': 'error',
       'no-useless-computed-key': 'error',
       'no-useless-concat': 'error',

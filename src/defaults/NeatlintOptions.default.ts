@@ -76,8 +76,7 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
       '@typescript-eslint/consistent-type-exports': 'error',
       '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/explicit-member-accessibility': 'error',
-      '@typescript-eslint/prefer-readonly': 'error',
-      '@typescript-eslint/strict-boolean-expressions': 'error'
+      '@typescript-eslint/prefer-readonly': 'error'
     }
   }
 };

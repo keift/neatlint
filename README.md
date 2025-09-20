@@ -50,8 +50,8 @@ Strict ESLint presets for modern TypeScript projects.
 - Enforces type safety
 - Encourages modern syntax
 - Prohibits potentially unsafe patterns
-- Requires explicit readonly and accessibility modifiers in classes
 - Disallows interfaces, using only types
+- Requires explicit readonly and accessibility modifiers in classes
 - Bans `var` and warns about proper use of `const` and `let`
 - ...and much more!
 

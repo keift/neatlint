@@ -59,21 +59,8 @@ Strict ESLint presets for modern TypeScript projects.
 
 You can install it as follows.
 
-```shell
-// NPM
+```ruby
 npm install neatlint
-
-// PNPM
-pnpm install neatlint
-
-// Yarn
-yarn add neatlint
-
-// Bun
-bun add neatlint
-
-// Deno
-deno install npm:neatlint
 ```
 
 ## Documentation

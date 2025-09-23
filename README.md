@@ -59,7 +59,7 @@ Strict ESLint presets for modern TypeScript projects.
 
 You can install it as follows.
 
-```ruby
+```shell
 npm install neatlint
 ```
 

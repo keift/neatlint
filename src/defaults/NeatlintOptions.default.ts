@@ -47,6 +47,7 @@ export const javascript_rules: { configs: ESLintConfig['rules']; custom: ESLintC
     'no-useless-rename': 'error',
     'no-useless-return': 'error',
     'object-shorthand': 'error',
+    'one-var': ['error', 'never'],
     'prefer-arrow-callback': 'error',
     'prefer-template': 'error',
     eqeqeq: 'error'

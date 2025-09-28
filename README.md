@@ -141,10 +141,10 @@ Suggested uses are as follows. We recommend using [Prettier](https://npmjs.com/p
 >     "strict": true,
 >     "esModuleInterop": true,
 >
->     "target": "ES2020",
->     "module": "esnext",
+>     "target": "ESNext",
+>     "module": "ESNext",
 >     "moduleResolution": "bundler",
->     "lib": ["dom", "ES2020"],
+>     "lib": ["DOM", "ESNext"],
 >
 >     "typeRoots": ["./types", "./node_modules/@types"]
 >   }

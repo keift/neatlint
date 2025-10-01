@@ -8,9 +8,9 @@
 [Function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function
 [Promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [Void]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Undefined
-[NeatlintOptionsDefault]: https://github.com/keift/neatlint/blob/main/src/defaults/NeatlintOptions.default.ts
+[NeatlintOptionsDefault]: ./src/defaults/NeatlintOptions.default.ts
 [ESLintConfig]: https://github.com/eslint/eslint/blob/main/lib/types/index.d.ts#L1750
-[NeatlintOptions]: https://github.com/keift/neatlint/blob/main/src/types/NeatlintOptions.type.ts
+[NeatlintOptions]: ./src/types/NeatlintOptions.type.ts
 
 <div align="center">
   <br/>

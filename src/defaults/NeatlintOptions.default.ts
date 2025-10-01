@@ -40,6 +40,7 @@ export const javascript_rules: { configs: ESLintConfig['rules']; custom: ESLintC
     'no-new-func': 'error',
     'no-new-wrappers': 'error',
     'no-object-constructor': 'error',
+    'no-restricted-imports': ['error', { patterns: ['node:*'] }],
     'no-restricted-syntax': ['error', "CallExpression[callee.name='String']", "CallExpression[callee.name='Boolean']", "CallExpression[callee.name='parseFloat']", "CallExpression[callee.property.name='forEach']", "CallExpression[callee.property.name='join'][callee.object.callee.property.name='split']", 'DebuggerStatement', 'EmptyStatement', 'ForInStatement', 'LabeledStatement', 'SequenceExpression', 'SwitchStatement', 'WithStatement'],
     'no-useless-call': 'error',
     'no-useless-computed-key': 'error',

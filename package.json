@@ -15,9 +15,9 @@
     "lint": "eslint ./"
   },
   "dependencies": {
-    "@eslint/js": "^9.36.0",
+    "@eslint/js": "^9.37.0",
     "@types/lodash.merge": "^4.6.9",
-    "eslint": "^9.36.0",
+    "eslint": "^9.37.0",
     "jiti": "^2.6.1",
     "lodash.merge": "^4.6.2",
     "typescript": "^5.9.3",

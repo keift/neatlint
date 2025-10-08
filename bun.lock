@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "neatlint",
+      "name": "neatlintt",
       "dependencies": {
         "@eslint/js": "^9.37.0",
         "@types/lodash.merge": "^4.6.9",

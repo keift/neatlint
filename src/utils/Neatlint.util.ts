@@ -15,14 +15,14 @@ export const Neatlint = (options: NeatlintOptions = NeatlintOptionsDefault): ESL
       files: options.javascript?.files,
       languageOptions: options.javascript?.languageOptions,
       plugins: options.javascript?.plugins,
-      rules: options.disabled ? {} : options.javascript?.rules
+      rules: options.disabled === true ? {} : options.javascript?.rules
     },
 
     {
       files: options.typescript?.files,
       languageOptions: options.typescript?.languageOptions,
       plugins: options.typescript?.plugins,
-      rules: options.disabled ? {} : options.typescript?.rules
+      rules: options.disabled === true ? {} : options.typescript?.rules
     },
 
     ...(options.config && options.config.length !== 0 ? options.config : [])

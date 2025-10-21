@@ -1,6 +1,6 @@
 {
   "name": "neatlint",
-  "version": "1.1.22",
+  "version": "1.1.23",
   "description": "Strict ESLint presets for modern TypeScript projects.",
   "license": "MIT",
   "homepage": "https://github.com/keift/neatlint",
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@eslint/js": "^9.38.0",
+    "@types/lodash.merge": "^4.6.9",
     "eslint": "^9.38.0",
     "jiti": "^2.6.1",
     "lodash.merge": "^4.6.2",
@@ -23,7 +24,6 @@
     "typescript-eslint": "^8.46.2"
   },
   "devDependencies": {
-    "@types/lodash.merge": "^4.6.9",
     "prettier": "^3.6.2",
     "tsup": "^8.5.0"
   },

@@ -5,7 +5,6 @@ export default defineConfig({
   cjsInterop: true,
   clean: true,
   dts: true,
-
   outDir: './dist',
   format: ['esm', 'cjs'],
   entry: ['./src/main.ts']

@@ -21,7 +21,7 @@
     "jiti": "^2.6.1",
     "lodash.merge": "^4.6.2",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.3"
+    "typescript-eslint": "^8.46.4"
   },
   "devDependencies": {
     "prettier": "^3.6.2",

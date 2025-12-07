@@ -41,7 +41,65 @@ export const javascript_rules: { configs: ESLintConfig['rules']; custom: ESLintC
     'no-new-wrappers': 'error',
     'no-object-constructor': 'error',
     'no-restricted-imports': ['error', { patterns: ['node:*'] }],
-    'no-restricted-syntax': ['error', "CallExpression[callee.name='String']", "CallExpression[callee.name='Boolean']", "CallExpression[callee.name='parseFloat']", "CallExpression[callee.property.name='forEach']", "CallExpression[callee.property.name='join'][callee.object.callee.property.name='split']", 'DebuggerStatement', 'EmptyStatement', 'ForInStatement', 'LabeledStatement', 'SequenceExpression', 'SwitchStatement', 'WithStatement'],
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector: "CallExpression[callee.name='String']",
+        message: 'Use `.toString()` instead.'
+      },
+      {
+        selector: "CallExpression[callee.name='Boolean']",
+        message: 'Use `!!value` instead.'
+      },
+      {
+        selector: "CallExpression[callee.name='parseFloat']",
+        message: 'Use `Number()` instead.'
+      },
+      {
+        selector: "CallExpression[callee.property.name='forEach']",
+        message: 'Use `for...of` instead.'
+      },
+      {
+        selector: "CallExpression[callee.property.name='join'][callee.object.callee.property.name='split']",
+        message: 'Use `.replaceAll()` instead.'
+      },
+      {
+        selector: "CallExpression[callee.property.name='then']",
+        message: "Use try/catch instead."
+      },
+      {
+        selector: "CallExpression[callee.property.name='catch']",
+        message: "Use try/catch instead."
+      },
+      {
+        selector: 'SwitchStatement',
+        message: 'Use if/else instead.'
+      },
+      {
+        selector: 'ForInStatement',
+        message: 'Use `for...of` instead.'
+      },
+      {
+        selector: 'EmptyStatement',
+        message: 'Empty statements are unnecessary.'
+      },
+      {
+        selector: 'DebuggerStatement',
+        message: 'Debugger statements cannot be included in the production.'
+      },
+      {
+        selector: 'LabeledStatement',
+        message: 'Labeled statements reduce code readability.'
+      },
+      {
+        selector: 'SequenceExpression',
+        message: 'Sequence expressions reduce code readability.'
+      },
+      {
+        selector: 'WithStatement',
+        message: 'With statements are not considered safe.'
+      }
+    ],
     'no-useless-call': 'error',
     'no-useless-computed-key': 'error',
     'no-useless-concat': 'error',

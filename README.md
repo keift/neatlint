@@ -48,9 +48,10 @@ Strict ESLint presets for modern TypeScript projects.
 ## Features
 
 - Enforces type safety
+- Prohibits potentially unsafe patterns
 - Encourages modern syntax
 - Encourages the use of arrow functions
-- Prohibits potentially unsafe patterns
+- Encourages the use of try/catch
 - Bans `var` and warns about proper use of `const` and `let`
 - Disallows interfaces, using only types
 - Requires explicit readonly and accessibility modifiers in classes

@@ -64,6 +64,14 @@ export const javascript_rules: { configs: ESLintConfig['rules']; custom: ESLintC
         message: 'Use `.replaceAll()` instead.'
       },
       {
+        selector: "CallExpression[callee.property.name='then']",
+        message: 'Use try/catch instead.'
+      },
+      {
+        selector: "CallExpression[callee.property.name='catch']",
+        message: 'Use try/catch instead.'
+      },
+      {
         selector: 'SwitchStatement',
         message: 'Use if/else instead.'
       },

@@ -14,7 +14,7 @@
 
 <div align="center">
   <br/>
-  <img src="https://i.ibb.co/KpF1K8Zq/unknown.png" width="450px"/>
+  <img src="./assets/logo.png" width="450px"/>
   <br/>
   <br/>
   <img src="https://img.shields.io/npm/v/neatlint?label=version&color=%23633BFF"/>

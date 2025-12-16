@@ -16,11 +16,11 @@
   },
   "dependencies": {
     "@eslint/js": "latest",
-    "@types/lodash.merge": "latest",
+    "@types/lodash.merge": "^4.6.9",
     "@types/node": "latest",
     "eslint": "latest",
     "jiti": "latest",
-    "lodash.merge": "latest",
+    "lodash.merge": "^4.6.2",
     "typescript": "latest",
     "typescript-eslint": "latest"
   },

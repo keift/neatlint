@@ -15,8 +15,8 @@
         "typescript-eslint": "latest",
       },
       "devDependencies": {
-        "prettier": "^3.7.4",
-        "tsup": "^8.5.1",
+        "prettier": "latest",
+        "tsup": "latest",
       },
     },
   },

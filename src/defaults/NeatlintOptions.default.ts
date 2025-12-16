@@ -52,7 +52,19 @@ export const javascript_rules: { configs: ESLintConfig['rules']; custom: ESLintC
         message: 'Use `!!value` instead.'
       },
       {
-        selector: "CallExpression[callee.name='parseFloat']",
+        selector: "CallExpression[callee.name='isFinite']",
+        message: 'Use `Number.isFinite()` instead.'
+      },
+      {
+        selector: "CallExpression[callee.name='isNaN']",
+        message: 'Use `Number.isNaN()` instead.'
+      },
+      {
+        selector: "CallExpression[callee.name='parseInt']",
+        message: 'Use `Number.parseInt()` instead.'
+      },
+      {
+        selector: "CallExpression[callee.name='parseFloat'], CallExpression[callee.object.name='Number'][callee.property.name='parseFloat']",
         message: 'Use `Number()` instead.'
       },
       {

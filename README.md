@@ -63,10 +63,10 @@ You can install it as follows.
 
 ```shell
 // NPM
-npm install neatlint
+npm add neatlint
 
 // PNPM
-pnpm install neatlint
+pnpm add neatlint
 
 // Yarn
 yarn add neatlint
@@ -75,7 +75,7 @@ yarn add neatlint
 bun add neatlint
 
 // Deno
-deno install npm:neatlint
+deno add npm:neatlint
 ```
 
 ## Documentation

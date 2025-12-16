@@ -16,17 +16,17 @@
   },
   "dependencies": {
     "@eslint/js": "latest",
-    "@types/lodash.merge": "^4.6.9",
+    "@types/lodash.merge": "latest",
     "@types/node": "latest",
     "eslint": "latest",
     "jiti": "latest",
-    "lodash.merge": "^4.6.2",
+    "lodash.merge": "latest",
     "typescript": "latest",
     "typescript-eslint": "latest"
   },
   "devDependencies": {
-    "prettier": "^3.7.4",
-    "tsup": "^8.5.1"
+    "prettier": "latest",
+    "tsup": "latest"
   },
   "repository": {
     "type": "git",

@@ -75,7 +75,7 @@ yarn add neatlint
 bun add neatlint
 
 // Deno
-deno add npm:neatlint
+deno add neatlint
 ```
 
 ## Documentation

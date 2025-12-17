@@ -1,6 +1,6 @@
 {
   "name": "neatlint",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Strict ESLint presets for modern TypeScript projects.",
   "license": "MIT",
   "homepage": "https://github.com/keift/neatlint",

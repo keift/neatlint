@@ -5,7 +5,15 @@ export type NeatlintOptions = {
 
   ignores?: ESLintConfig['ignores'];
 
-  javascript?: {
+  append?: {
+    'no-restricted-imports'?: object[];
+    'no-restricted-syntax'?: {
+      selector: string;
+      message: string;
+    }[];
+  };
+
+  js?: {
     files?: ESLintConfig['files'];
     languageOptions?: ESLintConfig['languageOptions'];
     plugins?: ESLintConfig['plugins'];
@@ -13,7 +21,7 @@ export type NeatlintOptions = {
     rules?: ESLintConfig['rules'];
   };
 
-  typescript?: {
+  ts?: {
     files?: ESLintConfig['files'];
     languageOptions?: ESLintConfig['languageOptions'];
     plugins?: ESLintConfig['plugins'];

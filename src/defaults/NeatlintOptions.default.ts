@@ -4,7 +4,7 @@ import ESLintJS from '@eslint/js';
 import type { ESLintConfig } from '../types/ESLintConfig.type';
 import type { NeatlintOptions } from '../types/NeatlintOptions.type';
 
-export const javascript_rules: { configs: ESLintConfig['rules']; custom: ESLintConfig['rules'] } = {
+export const js_rules: { configs: ESLintConfig['rules']; custom: ESLintConfig['rules'] } = {
   configs: {
     ...ESLintJS.configs.recommended.rules,
 
@@ -125,7 +125,7 @@ export const javascript_rules: { configs: ESLintConfig['rules']; custom: ESLintC
   }
 };
 
-export const typescript_rules: { configs: ESLintConfig['rules']; custom: ESLintConfig['rules'] } = {
+export const ts_rules: { configs: ESLintConfig['rules']; custom: ESLintConfig['rules'] } = {
   configs: {
     ...(Object.assign({}, ...TSESLint.configs.strictTypeChecked.map((item) => item.rules ?? {})) as ESLintConfig['rules']),
     ...(Object.assign({}, ...TSESLint.configs.stylisticTypeChecked.map((item) => item.rules ?? {})) as ESLintConfig['rules'])
@@ -146,18 +146,18 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
 
   ignores: ['./dist/**'],
 
-  javascript: {
+  js: {
     files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts', '**/*.js', '**/*.jsx', '**/*.mjs', '**/*.cjs'],
     languageOptions: {},
     plugins: {},
 
     rules: {
-      ...javascript_rules.configs,
-      ...javascript_rules.custom
+      ...js_rules.configs,
+      ...js_rules.custom
     }
   },
 
-  typescript: {
+  ts: {
     files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
     languageOptions: {
       parser: TSESLint.parser,
@@ -171,8 +171,8 @@ export const NeatlintOptionsDefault: NeatlintOptions = {
     },
 
     rules: {
-      ...typescript_rules.configs,
-      ...typescript_rules.custom
+      ...ts_rules.configs,
+      ...ts_rules.custom
     }
   }
 };

@@ -8,21 +8,24 @@ import type { NeatlintOptions } from '../types/NeatlintOptions.type';
 export const Neatlint = (options: NeatlintOptions = NeatlintOptionsDefault): ESLintConfig[] => {
   options = merge({}, NeatlintOptionsDefault, options);
 
+  if (options.append?.['no-restricted-imports'] && typeof options.js?.rules?.['no-restricted-imports'] === 'object') options.js.rules['no-restricted-imports'] = [...options.js.rules['no-restricted-imports'], ...options.append['no-restricted-imports']];
+  if (options.append?.['no-restricted-syntax'] && typeof options.js?.rules?.['no-restricted-syntax'] === 'object') options.js.rules['no-restricted-syntax'] = [...options.js.rules['no-restricted-syntax'], ...options.append['no-restricted-syntax']];
+
   return [
     { ignores: options.ignores },
 
     {
-      files: options.javascript?.files,
-      languageOptions: options.javascript?.languageOptions,
-      plugins: options.javascript?.plugins,
-      rules: options.disabled === true ? {} : options.javascript?.rules
+      files: options.js?.files,
+      languageOptions: options.js?.languageOptions,
+      plugins: options.js?.plugins,
+      rules: options.disabled === true ? {} : options.js?.rules
     },
 
     {
-      files: options.typescript?.files,
-      languageOptions: options.typescript?.languageOptions,
-      plugins: options.typescript?.plugins,
-      rules: options.disabled === true ? {} : options.typescript?.rules
+      files: options.ts?.files,
+      languageOptions: options.ts?.languageOptions,
+      plugins: options.ts?.plugins,
+      rules: options.disabled === true ? {} : options.ts?.rules
     },
 
     ...(options.config && options.config.length !== 0 ? options.config : [])

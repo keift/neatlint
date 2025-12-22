@@ -9,7 +9,7 @@
 [Null]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null
 [Undefined]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Undefined
 
-<!---->
+<!----->
 
 [NeatlintOptionsDefault]: ./src/defaults/NeatlintOptions.default.ts
 [ESLintConfig]: ./src/types/ESLintConfig.type.ts

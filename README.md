@@ -66,19 +66,19 @@ Strict ESLint presets for modern TypeScript projects.
 You can install it as follows.
 
 ```shell
-// NPM
+# NPM
 npm add neatlint
 
-// PNPM
+# PNPM
 pnpm add neatlint
 
-// Yarn
+# Yarn
 yarn add neatlint
 
-// Bun
+# Bun
 bun add neatlint
 
-// Deno
+# Deno
 deno add neatlint
 ```
 

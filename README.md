@@ -67,7 +67,7 @@ You can install it as follows.
 > [!NOTE]
 > During installation, these packages are installed automatically: `@eslint/js`, `@types/node`, `eslint`, `jiti`, `typescript`, and `typescript-eslint`.
 >
-> As a result, you do not need to install these packages separately when installing Neatlint. If they are already listed in your project’s dependencies, keeping them is unnecessary and they can be safely removed.
+> As a result, you do not need to install these packages separately when installing Neatlint. If they are already listed in your project's dependencies, keeping them is unnecessary and they can be safely removed.
 
 ```shell
 # NPM

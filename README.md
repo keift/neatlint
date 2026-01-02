@@ -69,8 +69,7 @@ You can install it as follows.
 >
 > This is an intentional design choice to ensure that **Neatlint remains stable and up to date** across environments.
 >
-> As a result, you **do not need to install these packages separately** when installing Neatlint.  
-> If they are already listed in your project’s dependencies, keeping them is unnecessary and they can be safely removed.
+> As a result, you **do not need to install these packages separately** when installing Neatlint. If they are already listed in your project’s dependencies, keeping them is unnecessary and they can be safely removed.
 
 ```shell
 # NPM

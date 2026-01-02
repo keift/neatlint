@@ -65,9 +65,12 @@ Strict ESLint presets for modern TypeScript projects.
 You can install it as follows.
 
 > [!NOTE]
-> Along with this installation, the `@eslint/js`, `@types/node`, `eslint`, `jiti`, `typescript`, and `typescript-eslint` packages are also installed. This is intentional and ensures that Neatlint remains stable and up to date.
+> During installation, the following packages are installed automatically: `@eslint/js`, `@types/node`, `eslint`, `jiti`, `typescript`, and `typescript-eslint`.
 >
-> Therefore, when you install Neatlint, you do not need to install these packages separately. Even if you have previously added them to your project, it is not necessary to keep them as dependencies.
+> This is an intentional design choice to ensure that **Neatlint remains stable and up to date** across environments.
+>
+> As a result, you **do not need to install these packages separately** when installing Neatlint.  
+> If they are already listed in your project’s dependencies, keeping them is unnecessary and they can be safely removed.
 
 ```shell
 # NPM

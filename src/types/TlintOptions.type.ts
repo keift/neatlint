@@ -1,6 +1,6 @@
-import type { ESLintConfig } from '../types/ESLintConfig.type';
+import type { ESLintConfig } from './ESLintConfig.type';
 
-export type NeatlintOptions = {
+export type TlintOptions = {
   disabled?: boolean;
 
   ignores?: ESLintConfig['ignores'];

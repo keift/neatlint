@@ -2,7 +2,7 @@ import TSESLint from 'typescript-eslint';
 import ESLintJS from '@eslint/js';
 
 import type { ESLintConfig } from '../types/ESLintConfig.type';
-import type { NeatlintOptions } from '../types/NeatlintOptions.type';
+import type { TlintOptions } from '../types/TlintOptions.type';
 
 export const js_rules: { configs: ESLintConfig['rules']; custom: ESLintConfig['rules'] } = {
   configs: {
@@ -141,7 +141,7 @@ export const ts_rules: { configs: ESLintConfig['rules']; custom: ESLintConfig['r
   }
 };
 
-export const NeatlintOptionsDefault: NeatlintOptions = {
+export const TlintOptionsDefault: TlintOptions = {
   disabled: false,
 
   ignores: ['./dist/**'],

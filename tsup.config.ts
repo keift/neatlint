@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  bundle: true,
+  bundle: false,
   cjsInterop: true,
   clean: true,
   dts: true,

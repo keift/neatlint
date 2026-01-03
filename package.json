@@ -1,10 +1,10 @@
 {
-  "name": "neatlint",
-  "version": "1.2.8",
+  "name": "tlint",
+  "version": "1.0.0",
   "description": "Strict ESLint presets for modern TypeScript projects.",
   "license": "MIT",
-  "homepage": "https://github.com/keift/neatlint",
-  "bugs": "https://github.com/keift/neatlint/issues",
+  "homepage": "https://github.com/keift/tlint",
+  "bugs": "https://github.com/keift/tlint/issues",
   "main": "./dist/main.js",
   "module": "./dist/main.mjs",
   "types": "./dist/main.d.ts",
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/keift/neatlint"
+    "url": "https://github.com/keift/tlint"
   },
   "keywords": [
     "eslint",

@@ -1,3 +1,3 @@
-import { Neatlint } from './src/main';
+import { Tlint } from './src/main';
 
-export default Neatlint();
+export default Tlint();

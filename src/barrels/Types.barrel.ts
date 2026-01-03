@@ -1,2 +1,2 @@
 export type { ESLintConfig } from '../types/ESLintConfig.type';
-export type { NeatlintOptions } from '../types/NeatlintOptions.type';
+export type { TlintOptions } from '../types/TlintOptions.typee';

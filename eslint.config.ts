@@ -1,3 +1,3 @@
-import { Tlint } from './src/utils/Tlint.util';
+import { Tlint } from './src/main';
 
 export default Tlint();

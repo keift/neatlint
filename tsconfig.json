@@ -1,5 +1,5 @@
 {
-  "compilerOptionss": {
+  "compilerOptions": {
     "strict": true,
     "esModuleInterop": true,
 

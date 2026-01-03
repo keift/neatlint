@@ -1,8 +1,8 @@
-import TSESLint from 'typescript-eslint'
-import ESLintJS from '@eslint/js'
+import TSESLint from 'typescript-eslint';
+import ESLintJS from '@eslint/js';
 
-import type { ESLintConfig } from '../types/ESLintConfig.type'
-import type { TlintOptions } from '../types/TlintOptions.type'
+import type { ESLintConfig } from '../types/ESLintConfig.type';
+import type { TlintOptions } from '../types/TlintOptions.type';
 
 export const js_rules: { configs: ESLintConfig['rules']; custom: ESLintConfig['rules'] } = {
   configs: {
@@ -123,7 +123,7 @@ export const js_rules: { configs: ESLintConfig['rules']; custom: ESLintConfig['r
     'prefer-template': 'error',
     eqeqeq: 'error'
   }
-}
+};
 
 export const ts_rules: { configs: ESLintConfig['rules']; custom: ESLintConfig['rules'] } = {
   configs: {
@@ -139,7 +139,7 @@ export const ts_rules: { configs: ESLintConfig['rules']; custom: ESLintConfig['r
     '@typescript-eslint/prefer-readonly': 'error',
     '@typescript-eslint/strict-boolean-expressions': 'error'
   }
-}
+};
 
 export const TlintOptionsDefault: TlintOptions = {
   disabled: false,
@@ -175,4 +175,4 @@ export const TlintOptionsDefault: TlintOptions = {
       ...ts_rules.custom
     }
   }
-}
+};
